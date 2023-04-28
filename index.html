@@ -43,6 +43,8 @@
     <script>
       const submitButton = document.getElementById("submitButton");
       const outputDiv = document.getElementById("output");
+      const elemyCity = "New York | Athens";
+      const bislaCity = "California | New York"
       
        
 
@@ -54,13 +56,18 @@
         const Linkedin = document.getElementsByName("linkedin")[0].value;
         const Image = document.getElementsByName("image")[0].value;
         let Links = '';
+        let City = '';
         
         const selectedOption = selectImage.value;
             if (selectedOption === "https://media4.giphy.com/media/8JS1uPSWV35quCmEub/giphy.gif") {
-          Links = `<a target="_blank" style="text-decoration: none; color: #484848;" href="http://elemy.com">elemy.com</a>&nbsp;|&nbsp;<a target="_blank" style="text-decoration: none; color: #484848;" href="https://instagram.com/elemycare">@elemycare </a> <br>`;
-        } else if (selectedOption === "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTAxMDMzODk4YWMxMTk4OTRkMmI3ODFlMjA0NWI3NGQ3ODM1YmRjZCZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/F88kKi1Ak3BxNoDIPj/giphy.gif") {
-      Links = `<a target="_blank" style="text-decoration: none; color: #484848;" href="https://bisofla.com">bisofla.com</a>`;
-    }
+            Links = `<a target="_blank" style="text-decoration: none; color: #484848;" href="http://elemy.com">elemy.com</a>&nbsp;|&nbsp;<a target="_blank" style="text-decoration: none; color: #484848;" href="https://instagram.com/elemycare">@elemycare </a> <br>`;
+            City = elemyCity;
+            } else if (selectedOption === "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTAxMDMzODk4YWMxMTk4OTRkMmI3ODFlMjA0NWI3NGQ3ODM1YmRjZCZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/F88kKi1Ak3BxNoDIPj/giphy.gif") {
+            Links = `<a target="_blank" style="text-decoration: none; color: #484848;" href="https://bisofla.com">bisofla.com</a>`;
+            City = bislaCity;
+            };  
+    
+      
         
 
 
@@ -75,7 +82,7 @@
         <b style=";font-size: 12px; color: #484848;">${fullName}</b> <br>
         ${Position} <br>
         <div style="padding-top:12px; color: inherit; text-decoration: none;">
-          New York | Athens <br>
+          ${City} <br>
           Tel. ${Tel} <br>
           <a target="_blank" style="text-decoration: none; color: #484848;" href="${Linkedin}"> Linkedin </a> <br>
           ${Links}
